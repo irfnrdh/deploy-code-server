@@ -38,9 +38,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 #   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
 # Install NodeJS
-RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
-RUN sudo apt-get install -y nodejs
-
+RUN sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
+RUN sudo apt-get install -y nodejs && npm install --global yarn 
+   
 # Set instructions on build.
 # ONBUILD ADD package.json /app/
 # ONBUILD RUN npm install
@@ -52,9 +52,21 @@ RUN sudo apt-get install -y nodejs
 # Define default command.
 # CMD ["npm", "start"]
 
+
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-# RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension esbenp.prettier-vscode \
+     && for codextension in \
+     pkief.material-icon-theme \
+     akamud.vscode-theme-onedark \
+     christian-kohler.npm-intellisense \
+     formulahendry.code-runner \
+     seunlanlege.action-buttons \
+     coenraads.bracket-pair-colorizer-2 \
+     yzhang.markdown-all-in-one \
+     auchenberg.vscode-browser-preview \
+     ; do code-server --install-extension $codextension --extensions-dir $CUSTOM_HOME/.extensions; done  \
+
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
