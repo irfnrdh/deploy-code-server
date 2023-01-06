@@ -56,9 +56,26 @@ RUN sudo apt-get install -y nodejs
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-RUN code-server --install-extension pkief.material-icon-theme \
-    code-server --install-extension akamud.vscode-theme-onedark \
-    code-server --install-extension mhutchie.git-graph
+RUN   code-server --install-extension pkief.material-icon-theme \
+      code-server --install-extension  bceskavich.theme-dracula-at-night \
+      code-server --install-extension  vivaxy.vscode-conventional-commits \
+      code-server --install-extension  Vue.volar \
+      code-server --install-extension  rangav.vscode-thunder-client \
+      code-server --install-extension  znck.vue \
+      code-server --install-extension  formulahendry.auto-close-tag \
+      code-server --install-extension  steoates.autoimport \
+      code-server --install-extension  formulahendry.auto-rename-tag \
+      code-server --install-extension  pranaygp.vscode-css-peek \
+      code-server --install-extension  GitHub.vscode-pull-request-github \
+      code-server --install-extension  VisualStudioExptTeam.vscodeintellicode	  \
+      code-server --install-extension  christian-kohler.npm-intellisense \
+      code-server --install-extension  christian-kohler.path-intellisense \
+      code-server --install-extension  antfu.vite \
+      code-server --install-extension  Vue.vscode-typescript-vue-plugin \
+      code-server --install-extension  Wscats.vue \
+      code-server --install-extension  eamodio.gitlens \
+      code-server --install-extension  GitHub.copilot \ 
+      code-server --install-extension mhutchie.git-graph   
     
 # RUN  for codextension in \
 #      pkief.material-icon-theme \
