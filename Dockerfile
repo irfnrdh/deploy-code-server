@@ -56,16 +56,20 @@ RUN sudo apt-get install -y nodejs
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-RUN  for codextension in \
-     pkief.material-icon-theme \
-     akamud.vscode-theme-onedark \
-     christian-kohler.npm-intellisense \
-     formulahendry.code-runner \
-     seunlanlege.action-buttons \
-     coenraads.bracket-pair-colorizer-2 \
-     yzhang.markdown-all-in-one \
-     auchenberg.vscode-browser-preview \
-     ; do code-server --install-extension $codextension --extensions-dir $CUSTOM_HOME/.extensions; done  \
+RUN code-server --install-extension pkief.material-icon-theme \
+    code-server --install-extension akamud.vscode-theme-onedark \
+    code-server --install-extension mhutchie.git-graph
+    
+# RUN  for codextension in \
+#      pkief.material-icon-theme \
+#      akamud.vscode-theme-onedark \
+#      christian-kohler.npm-intellisense \
+#      formulahendry.code-runner \
+#      seunlanlege.action-buttons \
+#      coenraads.bracket-pair-colorizer-2 \
+#      yzhang.markdown-all-in-one \
+#      auchenberg.vscode-browser-preview \
+#      ; do code-server --install-extension $codextension --extensions-dir $CUSTOM_HOME/.extensions; done  \
 
 
 # Install apt packages:
