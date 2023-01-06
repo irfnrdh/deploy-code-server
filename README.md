@@ -1,4 +1,6 @@
-# deploy-code-server 🚀
+# Ngoding diawan 🚀
+
+[![Publish to Docker Hub](https://github.com/irfnrdh/ngoding-diawan/actions/workflows/to-dockerhub.yml/badge.svg?branch=main)](https://github.com/irfnrdh/ngoding-diawan/actions/workflows/to-dockerhub.yml)
 
 A collection of one-click buttons and scripts for deploying [code-server](https://github.com/cdr/code-server) to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
