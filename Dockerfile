@@ -1,3 +1,5 @@
+LABEL maintainer="Irfannur Diah <irfnrdh@gmail.com>"
+
 # Start from the code-server Debian base image
 FROM codercom/code-server:4.9.0
 
