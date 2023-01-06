@@ -2,6 +2,9 @@
 
 [![Publish to Docker Hub](https://github.com/irfnrdh/ngoding-diawan/actions/workflows/to-dockerhub.yml/badge.svg?branch=main)](https://github.com/irfnrdh/ngoding-diawan/actions/workflows/to-dockerhub.yml)
 
+Di rancang untuk pengembangan web 
+
+<!--
 A collection of one-click buttons and scripts for deploying [code-server](https://github.com/cdr/code-server) to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
 |                                                                                                                 | Name              | Type          | Lowest-Price Plan             | Deploy                                                  |
@@ -31,3 +34,5 @@ A collection of one-click buttons and scripts for deploying [code-server](https:
   - Most app platforms do not support running docker or virtual volume mounts in the container.
   - Storage may not be persistent. You may have to use [rclone](https://rclone.org/) to store your filesystem on a cloud service. Documented below:
   - [📄 Docs for code-server-deploy-container](deploy-container/)
+
+-->
