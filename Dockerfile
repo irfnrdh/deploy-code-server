@@ -39,7 +39,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
-RUN sudo apt-get install -y nodejs && npm install --global yarn 
+RUN sudo apt-get install -y nodejs 
+#&& npm install --global yarn 
    
 # Set instructions on build.
 # ONBUILD ADD package.json /app/
