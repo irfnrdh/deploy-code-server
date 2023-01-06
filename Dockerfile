@@ -73,7 +73,7 @@ RUN code-server --install-extension esbenp.prettier-vscode \
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
-
+COPY container/code-server/pages/ /usr/lib/code-server/src/browser/pages/
 # -----------
 
 # Port
